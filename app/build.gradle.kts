@@ -23,6 +23,21 @@ android {
             abiFilters.add("x86")
             abiFilters.add("x86_64")
         }
+
+        android {
+            packagingOptions {
+                exclude("META-INF/DEPENDENCIES")
+                exclude("META-INF/LICENSE")
+                exclude("META-INF/LICENSE.txt")
+                exclude("META-INF/license.txt")
+                exclude("META-INF/NOTICE")
+                exclude("META-INF/NOTICE.txt")
+                exclude("META-INF/notice.txt")
+                exclude("META-INF/ASL2.0")
+                exclude("META-INF/*.kotlin_module")
+            }
+        }
+
     }
 
     buildTypes {
